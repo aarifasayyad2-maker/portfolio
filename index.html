@@ -21,17 +21,27 @@
   <header>
     <nav class="navbar">
       <div class="logo"><i class="fa-solid fa-code"></i> MyPortfolio</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-item">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#skills" class="nav-item">Skills</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
       </ul>
+
+      <div class="nav-controls">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menuToggle" class="icon-btn hamburger" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
   </header>
 
   <!-- Hero / Home Section -->
-  <section id="hero" class="hero-section">
+  <section id="hero" class="hero-section scroll-reveal">
     <div class="hero-content">
       <img src="profile.jpg" alt="Profile Image" class="profile-img">
       <h1>Hello, I'm <span class="highlight">Aarifa</span></h1>
@@ -41,7 +51,7 @@
   </section>
 
   <!-- About Me Section -->
-  <section id="about" class="section">
+  <section id="about" class="section scroll-reveal">
     <h2>About Me</h2>
     <p>
       I am a software engineering student with a strong focus on object-oriented programming, 
@@ -50,7 +60,7 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section bg-alt">
+  <section id="skills" class="section bg-alt scroll-reveal">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skill-card"><i class="fa-brands fa-java"></i> Java & OOP</div>
@@ -62,9 +72,27 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
+  <section id="contact" class="section scroll-reveal">
     <h2>Contact</h2>
     <p>Reach out to me for collaborations or inquiries:</p>
+    
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <small class="error-msg" id="nameError"></small>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Your Email" required>
+        <small class="error-msg" id="emailError"></small>
+      </div>
+      <div class="form-group">
+        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+        <small class="error-msg" id="messageError"></small>
+      </div>
+      <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+      <p id="formSuccess" class="success-msg"></p>
+    </form>
+
     <div class="contact-details">
       <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> aarifasayyad2@gmail.com</p>
       <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Maharashtra, India</p>
@@ -76,5 +104,6 @@
     <p>&copy; 2026 Aarifa. All Rights Reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
