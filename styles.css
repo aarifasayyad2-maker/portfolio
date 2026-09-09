@@ -254,6 +254,47 @@ h2 {
   text-align: center;
 }
 
+/* Contact Section & Social Cards */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.social-card:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+}
+
+.social-text h3 {
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.social-text p {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -262,4 +303,25 @@ footer {
   color: #94a3b8;
   border-top: 1px solid #e2e8f0;
   margin-top: 2rem;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
 }
